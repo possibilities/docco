@@ -87,7 +87,7 @@
         if (hasCode) {
           save();
         }
-        docsText += (line = line.replace(lang.commentMatcher, '')) + '\n';
+        docsText += line + '\n';
         if (/^(---+|===+)$/.test(line)) {
           save();
         }

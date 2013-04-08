@@ -137,7 +137,8 @@ normal below.
       for line in lines
         if line.match(lang.commentMatcher) and not line.match(lang.commentFilter)
           save() if hasCode
-          docsText += (line = line.replace(lang.commentMatcher, '')) + '\n'
+          # docsText += (line = line.replace(lang.commentMatcher, '')) + '\n'
+          docsText += line + '\n'
           save() if /^(---+|===+)$/.test line
           prev = 'text'
         else
